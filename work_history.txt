@@ -1,0 +1,7 @@
+Day 1
+create a github repository called recipe-app-api
+create a Dockerfile
+create a requirements.txt
+create app folder
+build a docker: docker build .
+create a docker-compose.yml
