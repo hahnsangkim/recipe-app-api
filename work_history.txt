@@ -17,6 +17,12 @@ commit
 exercise unit test: run "docker-compose build; docker-compose run app sh -c "python manage.py test && flake8""
 Note whenever a package added, run docker-compose build first before "docker-compose build; docker-compose run app sh -c "python manage.py test && flake8""
 
+create core app
+create tests folder
+
+create a User model
+set it in settings
+make migration: run "docker-compose build; docker-compose run app sh -c "python manage.py makemigrations core""
 
 References
 Dockerfile ref https://docs.docker.com/engine/reference/builder/
