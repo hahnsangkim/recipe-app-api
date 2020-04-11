@@ -24,6 +24,10 @@ create a User model
 set it in settings
 make migration: run "docker-compose run app sh -c "python manage.py makemigrations core""
 
+create postgres
+edit Dockerfile, docker-compose
+edit settings
+
 References
 Dockerfile ref https://docs.docker.com/engine/reference/builder/
 Dockerfile code https://gist.github.com/LondonAppDev/27c64d2c2df3555470812d4d77611389
@@ -31,3 +35,9 @@ docker-compose doc https://docs.docker.com/compose/
 docker-compose code https://gist.github.com/LondonAppDev/c45ff292b4edcc6ebd90f71722d9988c
 django startproject https://docs.djangoproject.com/en/2.1/ref/django-admin/#startproject
 docker-compose run https://docs.docker.com/compose/reference/run/
+env var in Dockerfile https://docs.docker.com/compose/environment-variables/
+command in django https://docs.djangoproject.com/en/2.1/howto/custom-management-commands/#module-django.core.management
+call command in django https://docs.djangoproject.com/en/2.1/ref/django-admin/#django.core.management.call_command
+wait for db in django unit test https://stackoverflow.com/questions/52621819/django-unit-test-wait-for-database
+
+
