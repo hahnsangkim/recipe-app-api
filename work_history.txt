@@ -5,3 +5,23 @@ create a requirements.txt
 create app folder
 build a docker: docker build .
 create a docker-compose.yml
+run "docker-compose build"
+install django using docker-compose: 
+run "docker-compose run app sh -c "django-admin.py startproject app ." "
+commit: git add .; git commit -a
+set up travis-ci by linking it to github
+create .travis.yml configuration file
+add flake8 to requirements
+create .flake8 config file in the app folder
+commit
+exercise unit test: run "docker-compose build; docker-compose run app sh -c "python manage.py test && flake8""
+Note whenever a package added, run docker-compose build first before "docker-compose build; docker-compose run app sh -c "python manage.py test && flake8""
+
+
+References
+Dockerfile ref https://docs.docker.com/engine/reference/builder/
+Dockerfile code https://gist.github.com/LondonAppDev/27c64d2c2df3555470812d4d77611389
+docker-compose doc https://docs.docker.com/compose/
+docker-compose code https://gist.github.com/LondonAppDev/c45ff292b4edcc6ebd90f71722d9988c
+django startproject https://docs.djangoproject.com/en/2.1/ref/django-admin/#startproject
+docker-compose run https://docs.docker.com/compose/reference/run/
