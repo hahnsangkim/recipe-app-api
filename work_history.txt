@@ -39,6 +39,8 @@ RUN apk add --update --no-cache --virtual .tmp-build-deps \
         gcc libc-dev linux-headers postgresql-dev musl-dev zlib zlib-dev
 Whenever a new package added, run "docker-compose build"
 
+Add filtering
+convert tag ids into int and apply filter with int arrays
 
 References
 Dockerfile ref https://docs.docker.com/engine/reference/builder/

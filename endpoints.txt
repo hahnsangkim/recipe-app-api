@@ -13,5 +13,12 @@
 /api/recipe/recipes/1/ purpose: show recipe detail; GET or PUT-{title, ingredients, tags, time, price, link}; output: {}
 /api/recipe/recipes/1/upload-image purpose: upload an image; Form PUT-{file path}; output: {id, image:url}
 click image:url http://127.0.0.1:8000/media/uploads/recipe/c283f222-d32b-4bef-8db1-4e5b1c7ecebf.png
+/api/recipe/recipes/?ingredients=1 purpose: filter with ingredient; GET; output: [{id, title, ingredients[], tags[], time, price, link}]
+/api/recipe/recipes/?tags=1 purpose: filter with tags; GET; output: [{id, title, ingredients[], tags[], time, price, link}]
+/api/recipe/recipes/?tags=1&ingredients=1 purpose: filter ; GET; output: [{id, title, ingredients[], tags[], time, price, link}]
+
+/api/recipe/tags/?assigned_only=1 purpose: make sure to get tags with assigned to recipes; output: tags assigned only
+/api/recipe/tags/?assigned_only=0 purpose: list all tags; output: tags
+/api/recipe/ingredients/?assigned_only=1 purpose: make sure to get ingredients with assigned to recipes
 
 /api/user/me/     purpose: access priviledge; input: {Authorization, token}; output: access
