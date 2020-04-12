@@ -1,3 +1,14 @@
-/api/user/create/ purpose: create a user; input: email, password, name; output: 
-/api/user/token/  purpose: get a token; input: email, password; output: token
-/api/user/me/     purpose: access authorized; input: Authorization, token; output: access
+[public]
+/api/recipe/ purpose: show the links to tags and ingredients; input: GET-{}; output: {tags link, ingredients link}
+/api/user/create/ purpose: create a user; input: POST-{email, password, name}; output: {email, name}
+/api/user/token/  purpose: get a token; input: POST-{email, password}; output: {token}
+
+[admin]
+/admin/
+
+[private]
+/api/recipe/tags/ purpose: show the tag list and add one to it; input: POST-{name, token}; output: [{id, name}]
+/api/recipe/ingredients/ purpose: show the ingredient list and add one to it; input: POST-{name, token}; output: [{id, name}]
+
+
+/api/user/me/     purpose: access priviledge; input: {Authorization, token}; output: access
