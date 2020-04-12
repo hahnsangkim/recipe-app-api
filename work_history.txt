@@ -27,6 +27,10 @@ make migration: run "docker-compose run app sh -c "python manage.py makemigratio
 create postgres
 edit Dockerfile, docker-compose
 edit settings
+run "docker-compose up"
+commit
+
+create a superuser by running "docker-compose run app sh -c "python manage.py createsuperuser""
 
 References
 Dockerfile ref https://docs.docker.com/engine/reference/builder/
@@ -39,5 +43,7 @@ env var in Dockerfile https://docs.docker.com/compose/environment-variables/
 command in django https://docs.djangoproject.com/en/2.1/howto/custom-management-commands/#module-django.core.management
 call command in django https://docs.djangoproject.com/en/2.1/ref/django-admin/#django.core.management.call_command
 wait for db in django unit test https://stackoverflow.com/questions/52621819/django-unit-test-wait-for-database
+writine custom commands https://docs.djangoproject.com/en/2.1/howto/custom-management-commands/#module-django.core.management
+
 
 
