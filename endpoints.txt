@@ -9,6 +9,7 @@
 [private]
 /api/recipe/tags/ purpose: show the tag list and add one to it; input: POST-{name, token}; output: [{id, name}]
 /api/recipe/ingredients/ purpose: show the ingredient list and add one to it; input: POST-{name, token}; output: [{id, name}]
-
+/api/recipe/recipes purpose: list recipes;
+/api/recipe/recipes/1/ purpose: show recipe detail;
 
 /api/user/me/     purpose: access priviledge; input: {Authorization, token}; output: access
