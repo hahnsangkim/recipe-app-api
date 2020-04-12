@@ -32,6 +32,14 @@ commit
 
 create a superuser by running "docker-compose run app sh -c "python manage.py createsuperuser""
 
+Add upload image endpoint
+Pillow needs dependent packages; go to Dockerfile and add jpeg-dev, musl-dev, zlib, and zlib-dev
+RUN apk add --update --no-cache postgresql-client jpeg-dev
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+        gcc libc-dev linux-headers postgresql-dev musl-dev zlib zlib-dev
+Whenever a new package added, run "docker-compose build"
+
+
 References
 Dockerfile ref https://docs.docker.com/engine/reference/builder/
 Dockerfile code https://gist.github.com/LondonAppDev/27c64d2c2df3555470812d4d77611389

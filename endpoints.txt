@@ -7,9 +7,9 @@
 /admin/
 
 [private]
-/api/recipe/tags/ purpose: show the tag list and add one to it; input: POST-{name, token}; output: [{id, name}]
-/api/recipe/ingredients/ purpose: show the ingredient list and add one to it; input: POST-{name, token}; output: [{id, name}]
-/api/recipe/recipes purpose: list recipes;
-/api/recipe/recipes/1/ purpose: show recipe detail;
+/api/recipe/tags/ purpose: show the tag list and add one to it; input: GET or POST-{name, token}; output: [{id, name}]
+/api/recipe/ingredients/ purpose: show the ingredient list and add one to it; input: GET or POST-{name, token}; output: [{id, name}]
+/api/recipe/recipes/ purpose: list recipes; input: GET or POST-{title, ingredients, tags, time, price, link}; output: [{}, {}]
+/api/recipe/recipes/1/ purpose: show recipe detail; GET or PUT-{title, ingredients, tags, time, price, link}; output: {}
 
 /api/user/me/     purpose: access priviledge; input: {Authorization, token}; output: access
