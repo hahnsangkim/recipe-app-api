@@ -1,0 +1,3 @@
+/api/user/create/ purpose: create a user; input: email, password, name; output: 
+/api/user/token/  purpose: get a token; input: email, password; output: token
+/api/user/me/     purpose: access authorized; input: Authorization, token; output: access
